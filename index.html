@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>NECS 2026 Mobile App</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="device">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="status-right">
+        <span class="signal"></span>
+        <span class="wifi"></span>
+        <span class="battery"></span>
+      </div>
+    </div>
+
+    <div class="app-header">
+      <div class="header-left">
+        <div class="event-badge">NECS 2026</div>
+        <div class="header-title">Live in Music City</div>
+        <div class="header-sub">Bridgestone Arena • Nashville</div>
+      </div>
+
+      <div class="header-actions">
+        <button class="header-btn" id="musicBtn" aria-label="Music">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"></path>
+          </svg>
+        </button>
+
+        <button class="header-btn" id="notifBtn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V11a6 6 0 0 0-5-5.91V4a1 1 0 1 0-2 0v1.09A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="notif-panel" id="notifPanel">
+      <h4>Notifications</h4>
+      <div class="notif-item">
+        Valorant Semis starting in 10 minutes
+        <div class="notif-time">2 mins ago</div>
+      </div>
+      <div class="notif-item">
+        Bracket updated: Rocket League Round 2
+        <div class="notif-time">15 mins ago</div>
+      </div>
+      <div class="notif-item">
+        New replay available: Smash Upset Match
+        <div class="notif-time">1 hr ago</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- LIVE -->
+      <section class="screen active" id="screen-live">
+        <div class="screen-head">
+          <div class="screen-title">Live</div>
+          <div class="screen-pill">Now</div>
+        </div>
+
+        <div class="live-card">
+          <div class="live-top">
+            <div class="live-status">
+              <span class="live-dot"></span>
+              LIVE NOW
+            </div>
+            <div class="match-time">Game 2 • Map 3</div>
+          </div>
+
+          <div class="live-teams">
+            <div class="live-team">
+              <div class="team-logo">SEN</div>
+              <div class="team-name">Sentinels</div>
+              <div class="team-record">12W - 3L</div>
+            </div>
+
+            <div class="live-score-box">
+              <div class="live-score">7 - 5</div>
+              <div class="score-label">Round</div>
+            </div>
+
+            <div class="live-team">
+              <div class="team-logo">NRG</div>
+              <div class="team-name">NRG</div>
+              <div class="team-record">10W - 5L</div>
+            </div>
+          </div>
+
+          <button class="watch-btn" id="watchLive">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            Watch Live
+          </button>
+        </div>
+
+        <div class="section-title">Featured Games</div>
+        <div class="game-showcase">
+          <div class="game-card" data-game="Valorant">
+            <img src="assets/img/valorant.png" alt="Valorant">
+            <div class="game-card-name">Valorant</div>
+          </div>
+
+          <div class="game-card" data-game="Rocket League">
+            <img src="assets/img/rocket-league.png" alt="Rocket League">
+            <div class="game-card-name">Rocket League</div>
+          </div>
+
+          <div class="game-card" data-game="Smash Ultimate">
+            <img src="assets/img/smash.png" alt="Smash Ultimate">
+            <div class="game-card-name">Smash Ultimate</div>
+          </div>
+        </div>
+
+        <div class="section-title">Live Matches</div>
+
+        <div class="match-card" data-game="valorant">
+          <div class="match-header">
+            <div class="game-badge valorant"><span class="game-dot"></span> Valorant</div>
+            <div class="match-time">LIVE • 2:40 PM</div>
+          </div>
+          <div class="match-teams">
+            <div class="match-team">
+              <div class="team-mini">SEN</div>
+              <div class="team-full">Sentinels</div>
+            </div>
+            <div class="match-score">7 - 5</div>
+            <div class="match-team">
+              <div class="team-mini">NRG</div>
+              <div class="team-full">NRG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-card" data-game="rocket">
+          <div class="match-header">
+            <div class="game-badge rocket"><span class="game-dot"></span> Rocket League</div>
+            <div class="match-time">LIVE • 2:10 PM</div>
+          </div>
+          <div class="match-teams">
+            <div class="match-team">
+              <div class="team-mini">G2</div>
+              <div class="team-full">G2 Orbit</div>
+            </div>
+            <div class="match-score">2 - 1</div>
+            <div class="match-team">
+              <div class="team-mini">ABN</div>
+              <div class="team-full">Afterburn</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-card" data-game="smash">
+          <div class="match-header">
+            <div class="game-badge smash"><span class="game-dot"></span> Smash</div>
+            <div class="match-time">LIVE • 1:55 PM</div>
+          </div>
+          <div class="match-teams">
+            <div class="match-team">
+              <div class="team-mini">FT</div>
+              <div class="team-full">FrameTrick</div>
+            </div>
+            <div class="match-score">2 - 1</div>
+            <div class="match-team">
+              <div class="team-mini">EG</div>
+              <div class="team-full">EdgeGuard</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLAYERS -->
+      <section class="screen" id="screen-players">
+        <div class="screen-head">
+          <div class="screen-title">Players</div>
+          <div class="screen-pill">Tap a player</div>
+        </div>
+
+        <div class="search-wrap">
+          <input id="playerSearch" class="search" placeholder="Search players / event..." />
+        </div>
+
+        <div class="player-list" id="playerList">
+          <!-- Keep these gamer tags exactly (used by app.js lookup) -->
+          <div class="player-card" data-name="TenZed" data-game="Valorant">
+            <div class="player-left">
+              <div class="player-avatar">T</div>
+              <div class="player-info">
+                <div class="player-name">TenZed</div>
+                <div class="player-meta">Sovereign • Valorant</div>
+              </div>
+            </div>
+            <div class="player-stat">
+              <div class="stat-num">1.34</div>
+              <div class="stat-label">K/D</div>
+            </div>
+          </div>
+
+          <div class="player-card" data-name="JstnLite" data-game="Rocket League">
+            <div class="player-left">
+              <div class="player-avatar">J</div>
+              <div class="player-info">
+                <div class="player-name">JstnLite</div>
+                <div class="player-meta">Skyline • Rocket League</div>
+              </div>
+            </div>
+            <div class="player-stat">
+              <div class="stat-num">3.2</div>
+              <div class="stat-label">GPG</div>
+            </div>
+          </div>
+
+          <div class="player-card" data-name="LeoPrime" data-game="Super Smash Bros">
+            <div class="player-left">
+              <div class="player-avatar">L</div>
+              <div class="player-info">
+                <div class="player-name">LeoPrime</div>
+                <div class="player-meta">BracketFox • Super Smash Bros</div>
+              </div>
+            </div>
+            <div class="player-stat">
+              <div class="stat-num">92%</div>
+              <div class="stat-label">Win</div>
+            </div>
+          </div>
+
+          <!-- +13 more -->
+          <div class="player-card" data-name="HexNova" data-game="Valorant">
+            <div class="player-left">
+              <div class="player-avatar">H</div>
+              <div class="player-info">
+                <div class="player-name">HexNova</div>
+                <div class="player-meta">NightShift • Valorant</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">248</div><div class="stat-label">ACS</div></div>
+          </div>
+
+          <div class="player-card" data-name="VantaRush" data-game="Valorant">
+            <div class="player-left">
+              <div class="player-avatar">V</div>
+              <div class="player-info">
+                <div class="player-name">VantaRush</div>
+                <div class="player-meta">CopperCores • Valorant</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">27%</div><div class="stat-label">HS</div></div>
+          </div>
+
+          <div class="player-card" data-name="OrbitSage" data-game="Valorant">
+            <div class="player-left">
+              <div class="player-avatar">O</div>
+              <div class="player-info">
+                <div class="player-name">OrbitSage</div>
+                <div class="player-meta">ArcUnit • Valorant</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">146</div><div class="stat-label">ADR</div></div>
+          </div>
+
+          <div class="player-card" data-name="NeonQuill" data-game="Valorant">
+            <div class="player-left">
+              <div class="player-avatar">N</div>
+              <div class="player-info">
+                <div class="player-name">NeonQuill</div>
+                <div class="player-meta">Piston5 • Valorant</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">0.16</div><div class="stat-label">FK/R</div></div>
+          </div>
+
+          <div class="player-card" data-name="PixelPhantom" data-game="Rocket League">
+            <div class="player-left">
+              <div class="player-avatar">P</div>
+              <div class="player-info">
+                <div class="player-name">PixelPhantom</div>
+                <div class="player-meta">Skyline • Rocket League</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">1.3</div><div class="stat-label">GPG</div></div>
+          </div>
+
+          <div class="player-card" data-name="BoostBandit" data-game="Rocket League">
+            <div class="player-left">
+              <div class="player-avatar">B</div>
+              <div class="player-info">
+                <div class="player-name">BoostBandit</div>
+                <div class="player-meta">Afterburn • Rocket League</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">1.1</div><div class="stat-label">GPG</div></div>
+          </div>
+
+          <div class="player-card" data-name="AeroMint" data-game="Rocket League">
+            <div class="player-left">
+              <div class="player-avatar">A</div>
+              <div class="player-info">
+                <div class="player-name">AeroMint</div>
+                <div class="player-meta">Vortex • Rocket League</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">3.9</div><div class="stat-label">Shots</div></div>
+          </div>
+
+          <div class="player-card" data-name="GoalGolem" data-game="Rocket League">
+            <div class="player-left">
+              <div class="player-avatar">G</div>
+              <div class="player-info">
+                <div class="player-name">GoalGolem</div>
+                <div class="player-meta">StoneGate • Rocket League</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">1.8</div><div class="stat-label">Demos</div></div>
+          </div>
+
+          <div class="player-card" data-name="TiltProof" data-game="Rocket League">
+            <div class="player-left">
+              <div class="player-avatar">T</div>
+              <div class="player-info">
+                <div class="player-name">TiltProof</div>
+                <div class="player-meta">CleanRotations • Rocket League</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">3.0</div><div class="stat-label">Saves</div></div>
+          </div>
+
+          <div class="player-card" data-name="FrameTrick" data-game="Super Smash Bros">
+            <div class="player-left">
+              <div class="player-avatar">F</div>
+              <div class="player-info">
+                <div class="player-name">FrameTrick</div>
+                <div class="player-meta">BracketFox • Super Smash Bros</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">88%</div><div class="stat-label">Win</div></div>
+          </div>
+
+          <div class="player-card" data-name="EdgeGuard" data-game="Super Smash Bros">
+            <div class="player-left">
+              <div class="player-avatar">E</div>
+              <div class="player-info">
+                <div class="player-name">EdgeGuard</div>
+                <div class="player-meta">StockCheck • Super Smash Bros</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">3.1</div><div class="stat-label">KOs</div></div>
+          </div>
+
+          <div class="player-card" data-name="DIWizard" data-game="Super Smash Bros">
+            <div class="player-left">
+              <div class="player-avatar">D</div>
+              <div class="player-info">
+                <div class="player-name">DIWizard</div>
+                <div class="player-meta">AirControl • Super Smash Bros</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">5.2</div><div class="stat-label">Avg</div></div>
+          </div>
+
+          <div class="player-card" data-name="StockSniper" data-game="Super Smash Bros">
+            <div class="player-left">
+              <div class="player-avatar">S</div>
+              <div class="player-info">
+                <div class="player-name">StockSniper</div>
+                <div class="player-meta">LastHit • Super Smash Bros</div>
+              </div>
+            </div>
+            <div class="player-stat"><div class="stat-num">2</div><div class="stat-label">0TD</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REPLAYS -->
+      <section class="screen" id="screen-replays">
+        <div class="screen-head">
+          <div class="screen-title">Replays</div>
+          <div class="screen-pill">New</div>
+        </div>
+
+        <div class="replay-card">
+          <div class="replay-thumb">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            </div>
+            <div class="replay-duration">12:34</div>
+          </div>
+          <div class="replay-info">
+            <div class="replay-title">HexNova 1v3 - Semifinals</div>
+            <div class="replay-meta">
+              <span class="replay-game valorant">Valorant</span>
+              <span>•</span>
+              <span>2 hours ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="replay-card">
+          <div class="replay-thumb">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            </div>
+            <div class="replay-duration">08:19</div>
+          </div>
+          <div class="replay-info">
+            <div class="replay-title">Zero-Second Winner - Rocket League</div>
+            <div class="replay-meta">
+              <span class="replay-game rocket">Rocket</span>
+              <span>•</span>
+              <span>5 hours ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="replay-card">
+          <div class="replay-thumb">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            </div>
+            <div class="replay-duration">06:02</div>
+          </div>
+          <div class="replay-info">
+            <div class="replay-title">EdgeGuard Reverse 3-Stock</div>
+            <div class="replay-meta">
+              <span class="replay-game smash">Smash</span>
+              <span>•</span>
+              <span>Yesterday</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRACKETS -->
+      <section class="screen" id="screen-brackets">
+        <div class="screen-head">
+          <div class="screen-title">Brackets</div>
+          <div class="screen-pill">Updated</div>
+        </div>
+
+        <div class="bracket-wrap">
+          <div class="bracket-card">
+            <div class="bracket-title">Valorant Championship</div>
+            <div class="bracket-row">
+              <div class="bracket-team">Sovereign</div>
+              <div class="bracket-score win">2</div>
+              <div class="bracket-score">1</div>
+              <div class="bracket-team">NightShift</div>
+            </div>
+            <div class="bracket-row">
+              <div class="bracket-team">ArcUnit</div>
+              <div class="bracket-score">0</div>
+              <div class="bracket-score win">2</div>
+              <div class="bracket-team">CopperCores</div>
+            </div>
+            <div class="bracket-row">
+              <div class="bracket-team">Piston5</div>
+              <div class="bracket-score win">2</div>
+              <div class="bracket-score">0</div>
+              <div class="bracket-team">SignalZero</div>
+            </div>
+          </div>
+
+          <div class="bracket-card">
+            <div class="bracket-title">Rocket League Cup</div>
+            <div class="bracket-row">
+              <div class="bracket-team">G2 Orbit</div>
+              <div class="bracket-score win">3</div>
+              <div class="bracket-score">2</div>
+              <div class="bracket-team">Afterburn</div>
+            </div>
+            <div class="bracket-row">
+              <div class="bracket-team">Skyline</div>
+              <div class="bracket-score">1</div>
+              <div class="bracket-score win">3</div>
+              <div class="bracket-team">Vortex</div>
+            </div>
+            <div class="bracket-row">
+              <div class="bracket-team">StoneGate</div>
+              <div class="bracket-score win">3</div>
+              <div class="bracket-score">0</div>
+              <div class="bracket-team">CleanRotations</div>
+            </div>
+          </div>
+
+          <div class="bracket-card">
+            <div class="bracket-title">Smash Ultimate Ladder</div>
+            <div class="bracket-row">
+              <div class="bracket-team">FrameTrick</div>
+              <div class="bracket-score win">3</div>
+              <div class="bracket-score">2</div>
+              <div class="bracket-team">EdgeGuard</div>
+            </div>
+            <div class="bracket-row">
+              <div class="bracket-team">DIWizard</div>
+              <div class="bracket-score">1</div>
+              <div class="bracket-score win">3</div>
+              <div class="bracket-team">StockSniper</div>
+            </div>
+            <div class="bracket-row">
+              <div class="bracket-team">AirControl</div>
+              <div class="bracket-score win">3</div>
+              <div class="bracket-score">0</div>
+              <div class="bracket-team">LastHit</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAT -->
+      <section class="screen" id="screen-chat">
+        <div class="screen-head">
+          <div class="screen-title">Chat</div>
+          <div class="screen-pill">Live</div>
+        </div>
+
+        <div class="chat-container">
+          <div class="chat-header">
+            <div class="chat-room-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path></svg>
+            </div>
+            <div class="chat-room-info">
+              <h3>General Chat</h3>
+              <p id="chatOnline">1,284 online</p>
+            </div>
+          </div>
+
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg">
+              <div class="chat-avatar mod">N</div>
+              <div class="chat-bubble">
+                <div class="chat-user">
+                  <span class="chat-username mod">NECS Mod</span>
+                  <span class="chat-time">2:34 PM</span>
+                </div>
+                <div class="chat-text">Welcome to NECS 2026! Keep chat friendly and enjoy the games!</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-input-wrap">
+            <input type="text" class="chat-input" placeholder="Type a message..." id="chatInput">
+            <button class="chat-send" id="chatSend">
+              <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="bottom-nav">
+      <div class="nav-item active" data-screen="live">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M21 6h-7.59l3.29-3.29L16 2l-4 4-4-4-.71.71L10.59 6H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 14H3V8h18v12zM9 10v8l7-4z"></path></svg>
+        <span class="nav-label">Live</span>
+      </div>
+
+      <div class="nav-item" data-screen="players">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+        <span class="nav-label">Players</span>
+      </div>
+
+      <div class="nav-item" data-screen="replays">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"></path></svg>
+        <span class="nav-label">Replays</span>
+      </div>
+
+      <div class="nav-item" data-screen="brackets">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2z"></path></svg>
+        <span class="nav-label">Brackets</span>
+      </div>
+
+      <div class="nav-item" data-screen="chat">
+        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path></svg>
+        <span class="nav-label">Chat</span>
+      </div>
+    </nav>
+
+    <div class="toast" id="toast">Saved</div>
+
+    <!-- ✅ REAL AUDIO PLAYER (hidden, controlled by JS) -->
+    <audio id="bgAudio" preload="auto"></audio>
+
+    <!-- PLAYER DETAIL MODAL -->
+    <div class="modal-backdrop" id="playerModalBackdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="playerModalTitle">
+        <div class="modal-top">
+          <div class="modal-title">
+            <div class="modal-avatar" id="playerModalAvatar">?</div>
+            <div>
+              <div class="modal-name" id="playerModalTitle">Player</div>
+              <div class="modal-sub" id="playerModalSub">Team • Event • Role</div>
+            </div>
+          </div>
+          <button class="modal-close" id="playerModalClose" aria-label="Close">✕</button>
+        </div>
+
+        <div class="modal-grid" id="playerModalGrid"></div>
+
+        <div class="modal-note" id="playerModalNote">
+          Tap other players to compare stats.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
