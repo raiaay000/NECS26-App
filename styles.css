@@ -78,53 +78,101 @@ body{
   background:rgba(255,255,255,0.2)
 }
 
+/* ✅ HEADER — MATCHES YOUR TARGET SCREENSHOT */
 .app-header{
-  padding:10px 18px 16px;
+  padding:14px 18px;
   display:flex;
   justify-content:space-between;
-  align-items:flex-start;
+  align-items:center;
   gap:14px;
   border-bottom:1px solid var(--border);
   flex-shrink:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0));
 }
 
-.header-left{display:flex;flex-direction:column;gap:6px}
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+
+.brand-icon{
+  width:44px;height:44px;
+  border-radius:14px;
+  background:transparent;
+  border:none;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 18px 40px rgba(0,0,0,0.35);
+  flex-shrink:0;
+}
+.brand-icon img{
+  width:44px;height:44px;
+  object-fit:contain;
+  display:block;
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:0;
+}
+
+/* 🔥 change event-badge from pill -> gold title text (like screenshot #2) */
 .event-badge{
-  display:inline-flex;align-items:center;
-  padding:6px 10px;
-  background:rgba(212,164,55,0.12);
-  border:1px solid rgba(212,164,55,0.35);
-  border-radius:999px;
+  display:block;
+  padding:0;
+  background:transparent;
+  border:none;
+  border-radius:0;
   color:var(--gold);
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:0.8px;
-  width:fit-content;
-}
-.header-title{
   font-family:'Space Grotesk',sans-serif;
+  font-size:22px;
   font-weight:800;
-  font-size:20px;
-  letter-spacing:0.2px;
-  color:#fff
+  letter-spacing:0.6px;
+  line-height:1.05;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
-.header-sub{font-size:12px;color:var(--text-sec)}
+
+/* keep these in DOM but hide to match compact header */
+.header-title,
+.header-sub{
+  display:none;
+}
 
 .header-actions{display:flex;gap:10px;align-items:center}
+
 .header-btn{
-  width:44px;height:44px;
+  width:52px;height:52px;
   border:2px solid var(--border);
   background:rgba(139,69,19,0.08);
-  border-radius:14px;
+  border-radius:18px;
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;
+  position:relative;
 }
 .header-btn:active{border-color:var(--gold);transform:scale(0.98)}
-.header-btn svg{width:20px;height:20px;fill:var(--gold)}
+.header-btn svg{width:22px;height:22px;fill:var(--gold)}
 
+/* pink dot on notif button (like screenshot #2) */
+.notif-dot{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#ff4d8d;
+  box-shadow:0 0 0 3px rgba(0,0,0,0.35);
+}
+
+/* NOTIFICATIONS PANEL */
 .notif-panel{
   position:absolute;
-  top:104px;
+  top:90px;
   right:18px;
   width:min(320px,calc(100% - 36px));
   background:rgba(18,18,26,0.98);
@@ -495,7 +543,7 @@ body{
 
 /* MUSIC PANEL */
 .music-panel{
-  position:absolute;top:104px;left:18px;
+  position:absolute;top:90px;left:18px;
   width:min(340px,calc(100% - 36px));
   background:rgba(18,18,26,0.98);
   border:2px solid var(--border);

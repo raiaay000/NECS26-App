@@ -20,14 +20,24 @@
       </div>
     </div>
 
+    <!-- ✅ FIXED HEADER (matches your target screenshot) -->
     <div class="app-header">
       <div class="header-left">
-        <div class="event-badge">NECS 2026</div>
-        <div class="header-title">Live in Music City</div>
-        <div class="header-sub">Bridgestone Arena • Nashville</div>
+        <div class="brand-icon">
+          <img class="brand-logo" src="assets/img/necs-logo.png" alt="NECS logo">
+        </div>
+
+        <div class="brand-text">
+          <div class="event-badge">NECS 2026</div>
+
+          <!-- kept in DOM (no layout impact) -->
+          <div class="header-title">Live in Music City</div>
+          <div class="header-sub">Bridgestone Arena • Nashville</div>
+        </div>
       </div>
 
       <div class="header-actions">
+        <!-- ✅ DO NOT REMOVE / DO NOT CHANGE ID -->
         <button class="header-btn" id="musicBtn" aria-label="Music">
           <svg viewBox="0 0 24 24">
             <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"></path>
@@ -38,6 +48,7 @@
           <svg viewBox="0 0 24 24">
             <path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V11a6 6 0 0 0-5-5.91V4a1 1 0 1 0-2 0v1.09A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z"></path>
           </svg>
+          <span class="notif-dot" aria-hidden="true"></span>
         </button>
       </div>
     </div>
