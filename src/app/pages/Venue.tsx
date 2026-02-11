@@ -1,4 +1,4 @@
-import imgBridgestoneArena from 'figma:asset/f851de9a06d752f6dabcfdd27ebd3c3ad45bdf6c.png';
+import imgBridgestoneArena from '/src/assets/f851de9a06d752f6dabcfdd27ebd3c3ad45bdf6c.png';
 import { ExternalLink, MapPin, Calendar, Users } from 'lucide-react';
 
 export default function Venue() {

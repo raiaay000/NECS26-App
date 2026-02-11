@@ -3,11 +3,11 @@ import { FilterButton } from '../components/FilterButton';
 import { CheckoutModal } from '../components/CheckoutModal';
 import { ShoppingCart, Check } from 'lucide-react';
 import { useState, useMemo, useCallback } from 'react';
-import imgSmashHoodie from 'figma:asset/2b2a280f04a17c1ac33736ff6ad5449dc3d17cf8.png';
-import imgRocketLeagueJacket from 'figma:asset/488e72fa19749a72c7a21a03c4f3ec5728969e8b.png';
-import imgValorantShirt from 'figma:asset/0c245fa102397c5d0dfb22633de349b6cef091a4.png';
-import imgGamingMouse from 'figma:asset/730bf2513a0ea44e74c44acf4d2d649ec10ab715.png';
-import imgWaterBottle from 'figma:asset/b72f2f82c9e7cd9154ba8311bfec271a0d85fe83.png';
+import imgSmashHoodie from '/src/assets/2b2a280f04a17c1ac33736ff6ad5449dc3d17cf8.png';
+import imgRocketLeagueJacket from '/src/assets/488e72fa19749a72c7a21a03c4f3ec5728969e8b.png';
+import imgValorantShirt from '/src/assets/0c245fa102397c5d0dfb22633de349b6cef091a4.png';
+import imgGamingMouse from '/src/assets/730bf2513a0ea44e74c44acf4d2d649ec10ab715.png';
+import imgWaterBottle from '/src/assets/b72f2f82c9e7cd9154ba8311bfec271a0d85fe83.png';
 
 type Category = 'All' | 'Jerseys' | 'Hoodies' | 'Jackets' | 'Accessories';
 

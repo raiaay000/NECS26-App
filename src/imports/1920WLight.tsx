@@ -1,12 +1,12 @@
 import svgPaths from "./svg-nbinlan093";
-import imgNecs2026Logo from "figma:asset/f915a2bd51169a2aed3ce55db81b448cb38f03c0.png";
-import imgColdfrontLogo from "figma:asset/1d2cd256f62c61bdc72f6920a5791df2b9bbd225.png";
-import imgEmberfallLogo from "figma:asset/f108e0c8ca28bb006b4331dc8cd5a4b7d40e25a4.png";
-import imgTurboDriftLogo from "figma:asset/109ee1d129c15451366169418f88b90e03abbdad.png";
-import imgNeonCircuitLogo from "figma:asset/159ede76147efb06ffb96ac690e58cb544a43bc2.png";
-import imgValorant from "figma:asset/19969f2649ceaac6a34ab5ffebbd7755deae79b7.png";
-import imgRocketLeague from "figma:asset/6125a7d75ee7036a20fac24afb31f96d799c2320.png";
-import imgSmashUltimate from "figma:asset/21c413f53c90a0c177637d6c5dcb56ef1a7cc924.png";
+import imgNecs2026Logo from "/src/assets/f915a2bd51169a2aed3ce55db81b448cb38f03c0.png";
+import imgColdfrontLogo from "/src/assets/1d2cd256f62c61bdc72f6920a5791df2b9bbd225.png";
+import imgEmberfallLogo from "/src/assets/f108e0c8ca28bb006b4331dc8cd5a4b7d40e25a4.png";
+import imgTurboDriftLogo from "/src/assets/109ee1d129c15451366169418f88b90e03abbdad.png";
+import imgNeonCircuitLogo from "/src/assets/159ede76147efb06ffb96ac690e58cb544a43bc2.png";
+import imgValorant from "/src/assets/19969f2649ceaac6a34ab5ffebbd7755deae79b7.png";
+import imgRocketLeague from "/src/assets/6125a7d75ee7036a20fac24afb31f96d799c2320.png";
+import imgSmashUltimate from "/src/assets/21c413f53c90a0c177637d6c5dcb56ef1a7cc924.png";
 
 function Span() {
   return (
