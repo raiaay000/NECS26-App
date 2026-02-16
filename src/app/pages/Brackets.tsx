@@ -1,5 +1,5 @@
 import { Trophy } from 'lucide-react';
-import something from "../../assets/89a552dfbe23821f9ddb05fef2a5a6d8d87608d1.png"
+import imgRadiantVanguardLogo from '/src/assets/89a552dfbe23821f9ddb05fef2a5a6d8d87608d1.png';
 import imgMidnightPulseLogo from '/src/assets/e9924b6cc2ad57afd43725356f783a6e5446b3b5.png';
 import imgLegacyApexLogo from '/src/assets/1125f01ad0d81daa20897a216109597cdd9304c2.png';
 import imgNeonCircuitLogo from '/src/assets/159ede76147efb06ffb96ac690e58cb544a43bc2.png';
